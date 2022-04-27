@@ -1,0 +1,19 @@
+body {
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.text {
+  margin: 15px;
+
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: left;
+}
+
+.black {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+}

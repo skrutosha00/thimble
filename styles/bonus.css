@@ -1,0 +1,74 @@
+.home {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px auto;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: relative;
+  height: 200px;
+}
+
+.card > img {
+  position: absolute;
+  top: 0;
+
+  width: 140px;
+  height: 140px;
+
+  transition: transform 0.1s ease, opacity 0.5s ease, top 0.5s ease;
+}
+
+.card img.anim {
+  top: -30px;
+}
+
+.card .block {
+  margin-top: 150px;
+}
+
+.mid {
+  margin-top: 30px;
+}
+
+img.key {
+  height: 60px;
+  width: 60px;
+}
+
+img.coins_group {
+  height: 100px;
+  width: 100px;
+}
+
+img.coins_group,
+img.key {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  top: 10%;
+}
+
+.amount {
+  position: absolute;
+  bottom: 70px;
+
+  width: 120px;
+  font-size: 24px;
+
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}

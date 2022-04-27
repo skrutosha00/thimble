@@ -1,0 +1,104 @@
+.balance_field_coin {
+  margin: 10px auto auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 60%;
+}
+
+.pers {
+  width: 120px;
+}
+
+.square {
+  margin: 10px auto 10px;
+
+  width: 105px;
+  height: 105px;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.square img {
+  width: 105px;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.green {
+  font-size: 32px;
+}
+
+.footer {
+  width: 80%;
+  margin: 15px auto auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.double {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.double .text {
+  position: absolute;
+  font-size: 40px;
+  width: 100%;
+  top: calc(50% - 20px);
+}
+
+.mid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mid > div {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+.mid img {
+  width: 60px;
+  height: 76px;
+}
+
+.tiny {
+  width: 64px;
+  height: 31px;
+  line-height: 31px;
+  font-size: 24px;
+}
+
+.right {
+  position: relative;
+  font-size: 24px;
+}
+
+.right .text {
+  margin-top: 65px;
+  position: relative;
+  z-index: 2;
+}
+
+.right img {
+  height: 90px;
+  width: 90px;
+
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - 45px);
+  left: calc(50% - 45px);
+}

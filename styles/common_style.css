@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Londrina";
+  src: url("../Londrina.ttf");
+}
+
+body {
+  font-family: "Londrina";
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+
+  background-image: url("../png/back.png");
+  background-size: 100vw 100vh;
+  min-width: 800px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.block {
+  border: 2px solid transparent;
+  border-radius: 28px;
+}
+
+.warning {
+  position: absolute;
+  z-index: 10;
+  left: -60%;
+  top: 25%;
+  transition: left ease 0.5s;
+
+  width: 50%;
+  height: 50%;
+
+  font-size: 25px;
+  color: #fff;
+}
+
+.warning .again {
+  margin: 20px auto;
+  background: linear-gradient(180deg, #3df12c 0%, #30c922 100%);
+  border-radius: 12px;
+  width: 65%;
+  height: 59px;
+  line-height: 59px;
+}
+
+.black {
+  background: linear-gradient(
+        180deg,
+        #00364b 0%,
+        #00121c 49.06%,
+        #25454e 115.31%
+      )
+      padding-box,
+    linear-gradient(300deg, #d5830e -3.53%, #ffff90 108.46%) border-box;
+}
+
+.red {
+  background: linear-gradient(
+        180deg,
+        #e80505 0%,
+        #b70b0b 49.06%,
+        #4e0000 115.31%
+      )
+      padding-box,
+    linear-gradient(300deg, #d5830e -3.53%, #ffff90 108.46%) border-box;
+}
+
+.gray {
+  background: linear-gradient(
+        180deg,
+        #d0d0d0 0%,
+        #7b7b7b 49.06%,
+        #b3b3b3 115.31%
+      )
+      padding-box,
+    linear-gradient(300deg, #d5830e -3.53%, #ffff90 108.46%) border-box;
+}
+
+.green {
+  background: linear-gradient(
+        180deg,
+        #009b47 0%,
+        #54a800 49.06%,
+        #247200 115.31%
+      )
+      padding-box,
+    linear-gradient(300deg, #d5830e -3.53%, #ffff90 108.46%) border-box;
+}
+
+.small {
+  width: 119px;
+  height: 43px;
+  line-height: 43px;
+  font-size: 24px;
+}
+
+.big {
+  width: 178px;
+  height: 92px;
+}
+
+.balance_field_coin,
+.balance_field_key {
+  display: flex;
+  width: 162px;
+}
+
+.balance_field_coin img,
+.balance_field_key img {
+  width: 40px;
+  height: 40px;
+}
+
+.balance_coin,
+.balance_key {
+  width: 70%;
+  transition: color 0.5s ease;
+}
+
+.balance_coin.anim,
+.balance_key.anim {
+  color: #009b47;
+}
