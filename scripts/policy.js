@@ -1,5 +1,5 @@
 if (!localStorage.getItem('coin_thimble')) {
-    localStorage.setItem('coin_thimble', 1000)
+    localStorage.setItem('coin_thimble', 2000)
 }
 
 if (!localStorage.getItem('key_thimble')) {

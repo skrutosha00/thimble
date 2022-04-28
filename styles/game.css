@@ -89,13 +89,24 @@
   position: absolute;
   top: 20%;
   left: 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bonus .text {
   position: absolute;
   font-size: 40px;
   width: 100%;
-  top: calc(50% - 20px);
+  height: 50px;
+  line-height: 50px;
+  top: calc(50% - 25px);
+}
+
+.bonus img {
+  width: 70px;
+  height: 70px;
 }
 
 .buy {

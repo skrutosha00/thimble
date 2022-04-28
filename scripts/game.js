@@ -104,16 +104,20 @@ betButton.onclick = () => {
     active = false
     changeBalance('coin', -Number(bet.innerHTML))
 
-    let mixCount = 0
-    let mixInterval = setInterval(() => {
-        if (mixCount == 10) { clearInterval(mixInterval) }
-        mixCups()
-        mixCount += 1
-    }, 300);
+    showCups()
 
     setTimeout(() => {
-        playing = true
-    }, 3800);
+        let mixCount = 0
+        let mixInterval = setInterval(() => {
+            if (mixCount == 10) { clearInterval(mixInterval) }
+            mixCups()
+            mixCount += 1
+        }, 300);
+
+        setTimeout(() => {
+            playing = true
+        }, 3800);
+    }, 1300);
 }
 
 plus.onclick = () => {
@@ -144,7 +148,7 @@ againButton.onclick = () => {
 }
 
 function generateCups(amount) {
-    let closerCups = amount <= 4 ? 40 : 0
+    let closerCups = amount <= 4 ? 60 : 15
 
     for (let i = 0; i < amount; i++) {
         let cup = document.createElement('img')
@@ -152,8 +156,13 @@ function generateCups(amount) {
 
         cup.src = '../png/cup.png'
         cup.dataset.index = i
-        cup.style.bottom = randInt(105, 125) + 'px'
-        cup.style.left = 180 + closerCups + i * ((400 - closerCups * 2) / (amount - 1)) + 'px'
+
+        if (i < 1 || i > amount - 2) {
+            cup.style.bottom = '100px'
+        } else {
+            cup.style.bottom = randInt(105, 125) + 'px'
+        }
+        cup.style.left = (window.screen.width / 2 - 250) + closerCups + i * ((450 - closerCups * 2) / (amount - 1)) + 'px'
 
         if (amount > 5) {
             cup.style.height = '55px'
@@ -167,6 +176,36 @@ function generateCups(amount) {
 function mixCups() {
     let randomCups = shuffle(cups);
     [randomCups[0].style.left, randomCups[1].style.left] = [randomCups[1].style.left, randomCups[0].style.left];
+}
+
+function showCups() {
+    for (let cup of cups) {
+        let img = document.createElement('img')
+
+        if (Number(cup.dataset.index) < amount / 2 || cup.dataset.index == 7) {
+            img.classList.add('coin')
+
+            if (cup.dataset.index == 7) {
+                img.src = '../png/key.png'
+            } else {
+                img.src = '../png/coin.png'
+            }
+
+            img.style.bottom = cup.style.bottom
+            img.style.left = Number(cup.style.left.replace('px', '')) + 5 + 'px'
+            body.appendChild(img)
+        }
+
+        cup.style.bottom = Number(cup.style.bottom.replace('px', '')) + 40 + 'px'
+
+        setTimeout(() => {
+            cup.style.bottom = Number(cup.style.bottom.replace('px', '')) - 40 + 'px'
+        }, 1000);
+
+        setTimeout(() => {
+            img.remove()
+        }, 1300);
+    }
 }
 
 function updateChest() {
