@@ -15,6 +15,8 @@ let max = document.querySelector('.max')
 let betButton = document.querySelector('.bet_button')
 let againButton = document.querySelector('.again')
 
+let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
 let active = true
 let playing = false
 let bonus = 1
@@ -80,7 +82,7 @@ for (let cup of cups) {
             img.remove()
 
             warning.firstElementChild.innerHTML = win ? 'Congrats!<br/>You are the winner!' : 'No way!<br/>Try again right now'
-            warning.style.left = window.screen.width/2 - 200 + 'px'
+            warning.style.left = width / 2 - 200 + 'px'
         }, win ? 2500 : 1500);
     }
 }
@@ -162,7 +164,8 @@ function generateCups(amount) {
         } else {
             cup.style.bottom = randInt(100, 115) + 'px'
         }
-        cup.style.left = (window.screen.width / 2 - 250) + closerCups + i * ((450 - closerCups * 2) / (amount - 1)) + 'px'
+
+        cup.style.left = (width / 2 - 250) + closerCups + i * ((450 - closerCups * 2) / (amount - 1)) + 'px'
 
         if (amount > 5) {
             cup.style.height = '55px'
