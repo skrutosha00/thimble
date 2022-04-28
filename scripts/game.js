@@ -80,7 +80,7 @@ for (let cup of cups) {
             img.remove()
 
             warning.firstElementChild.innerHTML = win ? 'Congrats!<br/>You are the winner!' : 'No way!<br/>Try again right now'
-            warning.style.left = '200px'
+            warning.style.left = window.screen.width/2 - 200 + 'px'
         }, win ? 2500 : 1500);
     }
 }
@@ -136,7 +136,7 @@ max.onclick = () => {
 }
 
 againButton.onclick = () => {
-    warning.style.left = '-60%'
+    warning.style.left = '-55%'
     active = true
 
     localStorage.setItem('double_thimble', 0)
@@ -160,7 +160,7 @@ function generateCups(amount) {
         if (i < 1 || i > amount - 2) {
             cup.style.bottom = '100px'
         } else {
-            cup.style.bottom = randInt(105, 125) + 'px'
+            cup.style.bottom = randInt(100, 115) + 'px'
         }
         cup.style.left = (window.screen.width / 2 - 250) + closerCups + i * ((450 - closerCups * 2) / (amount - 1)) + 'px'
 

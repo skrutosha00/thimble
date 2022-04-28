@@ -39,11 +39,12 @@ a {
 .warning {
   position: absolute;
   z-index: 10;
-  left: -60%;
+  left: -55%;
   top: 25%;
   transition: left ease 0.5s;
 
   width: 50%;
+  max-width: 400px;
   height: 50%;
 
   font-size: 25px;
